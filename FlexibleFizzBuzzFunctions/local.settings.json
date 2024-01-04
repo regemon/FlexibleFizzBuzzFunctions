@@ -3,6 +3,7 @@
     "Values": {
         "WARNING": "This file is for local development and testing only. DO NOT commit this file to your repository again.",
         "AzureWebJobsStorage": "UseDevelopmentStorage=true",
-        "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated"
+        "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated"        ,
+        "hoge:foo": "bar"
     }
 }
