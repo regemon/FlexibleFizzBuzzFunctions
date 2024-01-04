@@ -3,12 +3,12 @@ using Microsoft.Extensions.Options;
 
 namespace FlexibleFizzBuzzFunctions.Services;
 
-public class FizzBuzzSolver : IFizzBuzzSolver
+public class FlexibleFizzBuzzSolver : IFizzBuzzSolver
 {
     private readonly IEnumerable<IFizzBuzzPartCalculator> _calculators;
     private readonly string _delimiter;
 
-    public FizzBuzzSolver(IOptions<SolverOptions> options)
+    public FlexibleFizzBuzzSolver(IOptions<SolverOptions> options)
     {
         _calculators = options.Value.Calculators.Select(item => new NaturalNumberWordCalculator(item.Threshold, item.ExpectedResult));
         _delimiter = options.Value.Delimiter;

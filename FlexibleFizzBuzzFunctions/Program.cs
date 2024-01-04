@@ -16,7 +16,7 @@ var host = new HostBuilder()
         services.Configure<SolverOptions>(context.Configuration.GetSection("di"));
         services.AddApplicationInsightsTelemetryWorkerService();
         services.ConfigureFunctionsApplicationInsights();
-        services.AddSingleton<IFizzBuzzSolver, FizzBuzzSolver>();
+        services.AddSingleton<IFizzBuzzSolver, FlexibleFizzBuzzSolver>();
     })
     .Build();
 
